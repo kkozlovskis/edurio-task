@@ -14,6 +14,7 @@ class SourceController extends Controller
 {
     public function csv(): StreamedResponse
     {
+        set_time_limit(0);
         $headers = [
             'Content-Type'          => 'text/csv',
             'Content-Disposition'   => 'attachment; filename="source.csv"',
