@@ -23,4 +23,6 @@ class Source extends Model
     protected $table = 'source';
 
     public $timestamps = false;
+
+    protected $hidden = ['id'];
 }
