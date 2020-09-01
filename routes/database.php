@@ -9,9 +9,11 @@ Route::prefix('foo')->group(function () {
 
         Route::prefix('source')->group(function () {
 
-            Route::get('/csv', 'SourceController@csv');
+            Route::get('/csv', 'SourceController@csv')
+                ->name('source.csv');
 
-            Route::get('/json', 'SourceController@json');
+            Route::get('/json', 'SourceController@json')
+                ->name('source.json');
         });
     });
 });
